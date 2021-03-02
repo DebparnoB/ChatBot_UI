@@ -1,0 +1,6 @@
+{
+    "/api/*":{
+    "target": "http://ec2-3-16-130-112.us-east-2.compute.amazonaws.com:8000",
+    "secure": false
+    }
+}

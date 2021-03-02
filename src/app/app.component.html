@@ -1,0 +1,79 @@
+<div class="container clearfix">
+  <div class="people-list" id="people-list">
+    <div class="bankHeader">Generic Bank of the World</div>
+    <div class="rowsBar">Home &nbsp;&nbsp;&nbsp;&nbsp; Banking &nbsp;&nbsp;&nbsp;&nbsp; Transacts
+      &nbsp;&nbsp;&nbsp;&nbsp; Account  </div>
+      <div id="displayPage" style="color: rgb(146, 212, 149); text-align: center; padding: 30px; 
+        font-family: Arial, Helvetica, sans-serif ">
+        "You have reached the homepage"
+      </div>
+  </div>
+
+  <div class="chat">
+    <div class="chat-header clearfix">
+      <img
+        src="assets/images/bgg.jpg"
+        alt="avatar" style="height: 50px; width: 50px"
+      />
+
+      <div class="chat-about">
+        <div class="chat-with">Generic-Bank Bot</div>
+        <div class="chat-num-messages">I am here to help</div>
+      </div>
+      <i class="fa fa-star"></i>
+    </div>
+    <!-- end chat-header -->
+
+    <div class="chat-history" #chatHistory [scrollTop]="chatHistory.scrollHeight">
+      <ul #chatbox1 id="chatbox1">
+        <div class="botMessage">
+          I am your personal Bank assistant. Feel free to ask any query!!
+        </div>
+      </ul>
+    </div>
+    <!-- end chat-history -->
+
+    <div class="chat-message clearfix">
+      <textarea
+        [(ngModel)]="message"
+        name="message-to-send"
+        id="message-to-send"
+        placeholder="Type your message"
+        rows="3"
+        (keydown)="triggerFunction($event)"
+      ></textarea>
+
+      <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+      <i class="fa fa-file-image-o"></i>
+
+      <button (click)="onSend()">Send</button>
+    </div>
+    <!-- end chat-message -->
+  </div>
+  <!-- end chat -->
+</div>
+<!-- end container -->
+
+<script id="message-template" type="text/x-handlebars-template">
+  <li class="clearfix">
+    <div class="message-data align-right">
+      <span class="message-data-time" >{{time}}, Today</span> &nbsp; &nbsp;
+      <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+    </div>
+    <div class="message other-message float-right">
+      {{messageOutput}}
+    </div>
+  </li>
+</script>
+
+<script id="message-response-template" type="text/x-handlebars-template">
+  <li>
+    <div class="message-data">
+      <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+      <span class="message-data-time">{{time}}, Today</span>
+    </div>
+    <div class="message my-message">
+      {{response}}
+    </div>
+  </li>
+</script>

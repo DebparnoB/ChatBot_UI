@@ -1,6 +1,7 @@
 import { stringify } from '@angular/compiler/src/util';
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { IntentPredictService } from './intent-predict.service';
+import { Intents } from './intents';
 
 @Component({
   selector: 'app-root',
@@ -11,13 +12,14 @@ export class AppComponent {
   message: string = "";
   botOutput: string = "";
   userMessage: string = "";
-  currentIntent: string = "";
+  currentIntent: string = "";  
   @ViewChild("chatbox1", { read: ElementRef }) private chatbox1: ElementRef;
 
-  constructor(
+  constructor(    
     private renderer: Renderer2,
     private intentPred: IntentPredictService
-  ) {}
+  ) {
+  }
   fontSizePx = 16;
 
   onSend() {
@@ -62,12 +64,16 @@ export class AppComponent {
     if(intent == "General_Greetings"){
       response = "Hello!! How can I help you?"
     }else{
-      response = intent;   
-      this.currentIntent = intent;   
-      bttn.onclick = function () {
-         document.getElementById("displayPage").innerHTML = "Activate Card here" ;
+      response = Intents[intent.trim()]["reply"];  
+      //this.currentIntent = intent;   
+      if(Intents[intent]["href"] != null){
+        var text1: string = Intents[intent]["href"]; 
+        bttn.onclick = function () {
+          document.getElementById("displayPage").innerHTML = text1 ;
+        }
+
+        linkReq = true;
       }
-      linkReq = true;
     }
 
     

@@ -1,9 +1,11 @@
-Abstract
 A novel scheme is proposed here to create a Chatbot- Utterance Generator. Chat bots are intelligent systems that understand user’s natural language queries and respond accordingly in a conversation. In banks, at customer care centers and enquiry desks, human is insufficient and usually takes long time to process the single request which results in wastage of time and also reduce quality of customer service. The primary goal of this chat-bot is, customer can interact with mentioning their queries in plain English and the chat-bot can resolve their queries with appropriate response in return. Developing a chat bot will provide a smart solution to solve these queries, provide information as and when required, improve service and increase number of customers. Customers can mention their queries in natural language and the chat-bot can respond to them with correct answer. 
-Generating Utterances
+
+
+Generating Utterances: 
 Utterance generator creates sample utterances that we can use within intents for our Chatbot. We are using  Alexa Utterance Generator to generate utterances. We have also referred different banking websites  and  collected  FAQs to obtain utterances.
  The response of a chatbot depends on the intent of the question the customer is asking. So the chatbot must be able to classify the question according to its intent and respond accordingly. So we are sorting out every possible category of intents and generating utterances of each intent.
-Preparing the Dataset
+
+Preparing the Dataset: 
 We  have prepared our data set as  questions that  people usually  ask  to  bank  employees,  at  customer  care centers or inquiry desks and categorize the questions according to their intents.   Training data can be provided as Markdown or as JSON, as a single file or as a directory containing multiple files. We are using JSON format here.
 The training data is structured into four different parts which is compatible with the specific ML model we have used (Rasa NLU) :  1. Common examples  2. Synonyms  3. Regex features  4. Lookup tables
 JSON format :
@@ -98,7 +100,7 @@ So we are using JSON format for the training data which will be fed to the machi
 We are trying to collect significant amount of examples of customer conversations. Since this is a classification problem the data must be diverse enough to allow ample number of categories (or intents) to be made. 
 
 
-The Machine Learning Model
+The Machine Learning Model: 
 We are using the RasaNLU of RASA Stack to create our ML Model. RASA stack is an open-source AI tool and being an opensource framework, it is easy to customize. Rasa NLU is an open-source natural language processing tool for intent classification, response retrieval and entity extraction in chatbots. 
 
 For example, taking a sentence like

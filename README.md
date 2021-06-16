@@ -1,10 +1,9 @@
 # ChatBot
 
+Demo: https://www.youtube.com/watch?v=7_8RBU2p2u0
 webapp url : http://ec2-3-138-173-214.us-east-2.compute.amazonaws.com:4200/
 
 A novel scheme is proposed here to create a Chatbot- Utterance Generator. Chat bots are intelligent systems that understand user’s natural language queries and respond accordingly in a conversation. In banks, at customer care centers and enquiry desks, human is insufficient and usually takes long time to process the single request which results in wastage of time and also reduce quality of customer service. The primary goal of this chat-bot is, customer can interact with mentioning their queries in plain English and the chat-bot can resolve their queries with appropriate response in return. Developing a chat bot will provide a smart solution to solve these queries, provide information as and when required, improve service and increase number of customers. Customers can mention their queries in natural language and the chat-bot can respond to them with correct answer. 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7_8RBU2p2u0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 # Generating Utterances: 
